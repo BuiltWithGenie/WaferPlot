@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="st-col col-12 col-sm st-module">
+        <st-waferplot id="ifni9" :dataset="wafer_data" v-model="selected_cell"></st-waferplot>
+        <p> Selected cell: {{selected_cell}} </p>
+    </div>
+    <div class="st-col col-12 col-sm st-module">
+        <st-waferplot id="iv0di" :angle="wafer_angle" :dataset="wafer_data" v-model="selected_cell" mode="Quiver"></st-waferplot>
+    </div>
+</div>
+<div class="row">
+    <div class="st-col col-6 col-sm st-module">
+        <q-btn id="ircoa" label="Animate" v-on:click="animate=true" color="primary" icon="nightlife"></q-btn><br>
+        <h6>Dimensions (N)</h6>
+        <q-slider id="ivz19" v-model="N" color="primary" :label="true" :max="20" :min="10" :step="1" :markers="true"></q-slider>
+        <h6>Magnitude</h6>
+        <q-slider id="i1bcz" color="primary" :label="true" :max="3" :min="0.1" :step="0.3" :markers="true" v-model="magnitude"></q-slider>
+        <h6>Angle</h6><br>
+        <q-knob id="iahws" color="primary" :min="0" :max="6.5" :step="0.6" v-model="angle" center-color="secondary"></q-knob>
+    </div>
+
+    <div class="st-col col-6 col-sm st-module">
+        <q-btn id="ircoa" label="Save" v-on:click="save=true" color="primary" icon="save"></q-btn><br>
+        <q-input label="File Name" v-model="filename"></q-input>
+        <q-select label="Load file" v-model="selected_file" :options="data_files"/>
+    </div>
+</div>
