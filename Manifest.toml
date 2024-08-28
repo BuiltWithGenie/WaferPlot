@@ -640,7 +640,7 @@ weakdeps = ["DataFrames"]
 
 [[deps.StippleWaferPlot]]
 deps = ["DataFrames", "Stipple", "StippleUI"]
-git-tree-sha1 = "9fe6fb7797b219867670d24068e36a1c3ed5bf5b"
+git-tree-sha1 = "f9ae90ec9f87177a52bd8d55acaed1e30709de56"
 repo-rev = "main"
 repo-url = "https://github.com/GenieFramework/StippleWaferPlot"
 uuid = "29f11006-3202-4091-a17b-0a26282d76dd"
