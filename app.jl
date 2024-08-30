@@ -36,7 +36,7 @@ Stipple.render(X::Matrix) = [X[:, i] for i in 1:size(X, 2)]
     #     wafer_angle = angle*ones(N,N)
     # end
     # @onchange magnitude begin
-    #     wafer_data = magnitude * rand(N,N)
+    #     wafer_data = magnitude / maximum(wafer_data) * wafer_data
     # end
     # @onchange angle begin
     #     wafer_angle = angle*ones(N,N)
