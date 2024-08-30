@@ -15,13 +15,12 @@ Stipple.render(X::Matrix) = [X[:, i] for i in 1:size(X, 2)]
     # @out variables can only be modified by the backend
     # @in variables can be modified by both the backend and the browser
     # variables must be initialized with constant values, or variables defined outside of the @app block
-    # @in N = 10
-    # @in selected_cell = [0,0]
     # @out wafer_data = rand(10,10)
     # @out wafer_angle = 2.0*ones(10,10)
+    # @in selected_cell = [0,0]
+    # @in N = 10
     # @in angle = 0.0
     # @in magnitude = 0.1
-    # @in random_angle = false
     # @in animate = false
     # file saving and loading
     # @in save = false
@@ -41,9 +40,6 @@ Stipple.render(X::Matrix) = [X[:, i] for i in 1:size(X, 2)]
     # end
     # @onchange angle begin
     #     wafer_angle = angle*ones(N,N)
-    # end
-    # @onbutton random_angle begin
-    #     wafer_angle = 2.0*rand(N,N)
     # end
     # the onbutton handler will set the variable to false after the block is executed
     # @onbutton animate begin
